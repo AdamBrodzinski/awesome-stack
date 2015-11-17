@@ -1,0 +1,9 @@
+[ignore]
+.*/react/node_modules/.*
+.*/node_modules/fbjs/.*
+
+[include]
+
+[libs]
+
+[options]
