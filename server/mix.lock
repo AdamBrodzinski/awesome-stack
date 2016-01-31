@@ -1,0 +1,9 @@
+%{"connection": {:hex, :connection, "1.0.2"},
+  "cowboy": {:hex, :cowboy, "1.0.4"},
+  "cowlib": {:hex, :cowlib, "1.0.2"},
+  "gettext": {:hex, :gettext, "0.9.0"},
+  "phoenix": {:hex, :phoenix, "1.1.4"},
+  "plug": {:hex, :plug, "1.1.0"},
+  "poison": {:hex, :poison, "2.0.1"},
+  "ranch": {:hex, :ranch, "1.2.1"},
+  "rethinkdb": {:hex, :rethinkdb, "0.3.1"}}
