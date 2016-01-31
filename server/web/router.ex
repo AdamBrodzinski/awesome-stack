@@ -5,7 +5,8 @@ defmodule App.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", App do
+  scope "/v1", App do
     pipe_through :api
+    post "/users", UserController, :create
   end
 end
