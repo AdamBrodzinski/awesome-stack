@@ -8,7 +8,7 @@ defmodule App do
 
     children = [
       supervisor(App.Endpoint, []),
-      worker(RethinkDB.Connection, []),
+      worker(App.DB, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

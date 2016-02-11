@@ -1,13 +1,18 @@
-import { ReduxRouter } from 'redux-router';
-import { Route } from 'react-router';
 import React from 'react';
+import { Router, Route, IndexRoute } from 'react-router'
+
 // pages
+import Home from './pages/Home';
 import Login from './pages/Login';
 
-export default function Routes() {
+
+export default function Routes(props) {
   return (
-    <ReduxRouter>
-      <Route path="/" component={Login}/>
-    </ReduxRouter>
+    <Router history={props.history}>
+      <Route path="/">
+        <IndexRoute component={Home}/>
+        <Route path="login" component={Login} />
+      </Route>
+    </Router>
   );
 }
