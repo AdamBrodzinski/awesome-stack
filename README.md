@@ -12,3 +12,5 @@ A boilerplate for a Phoenix and React/Redux web app.
 - Redux-React-Router
 - React-Router
 - Lokka (GraphQL client)
+- Webpack
+- React Transform Boilerplate
