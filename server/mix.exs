@@ -26,7 +26,6 @@ defmodule App.Mixfile do
 
   defp deps do
     [{:phoenix, "~> 1.1.2"},
-     {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:rethinkdb, "~> 0.3.2"},
      {:plug_graphql, "~> 0.1.4"},
