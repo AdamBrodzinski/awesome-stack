@@ -6,7 +6,7 @@ defmodule App.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix, :gettext] ++ Mix.compilers,
+     compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -17,7 +17,7 @@ defmodule App.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {App, []},
-     applications: [:phoenix, :cowboy, :logger, :gettext, :rethinkdb, :plug_graphql]]
+     applications: [:phoenix, :cowboy, :logger, :rethinkdb, :plug_graphql]]
   end
 
   # Specifies which paths to compile per environment.

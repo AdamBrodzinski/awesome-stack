@@ -1,2 +1,3 @@
 
 *.beam
+rethinkdb_data

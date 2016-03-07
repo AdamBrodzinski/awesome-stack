@@ -27,7 +27,6 @@ defmodule App.Web do
       use Phoenix.Controller
 
       import App.Router.Helpers
-      import App.Gettext
     end
   end
 
@@ -40,7 +39,6 @@ defmodule App.Web do
 
       import App.Router.Helpers
       import App.ErrorHelpers
-      import App.Gettext
     end
   end
 
@@ -53,7 +51,6 @@ defmodule App.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import App.Gettext
     end
   end
 
