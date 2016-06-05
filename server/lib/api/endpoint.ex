@@ -1,7 +1,7 @@
-defmodule App.Endpoint do
-  use Phoenix.Endpoint, otp_app: :app
+defmodule Api.Endpoint do
+  use Phoenix.Endpoint, otp_app: :api
 
-  socket "/socket", App.UserSocket
+  socket "/socket", Api.UserSocket
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -13,17 +13,12 @@ defmodule App.Endpoint do
   plug Plug.Logger
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:json],
     pass: ["*/*"],
     json_decoder: Poison
 
   plug Plug.MethodOverride
   plug Plug.Head
 
-  plug Plug.Session,
-    store: :cookie,
-    key: "_app_key",
-    signing_salt: "TMHDL/zE"
-
-  plug App.Router
+  plug Api.Router
 end

@@ -1,10 +1,10 @@
-defmodule App.ChannelCase do
+defmodule Api.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
 
   Such tests rely on `Phoenix.ChannelTest` and also
-  imports other functionality to make it easier
+  import other functionality to make it easier
   to build and query models.
 
   Finally, if the test case interacts with the database,
@@ -22,7 +22,7 @@ defmodule App.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint App.Endpoint
+      @endpoint Api.Endpoint
     end
   end
 

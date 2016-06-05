@@ -1,8 +1,19 @@
-# Starter App
+# GraphQL API 
 
-A very basic Phoenix API. Sets up RethinkDB and GraphQL with generic user type
+To start app:
 
-  1. Install dependencies with `mix deps.get`
-  2. Start Phoenix endpoint with `mix phoenix.server`
+  * `brew install rethinkdb`
+  * Install dependencies with `mix deps.get`
+  * Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000/graphql`](http://localhost:4000/graphql) from your browser to view the GraphQL schema.
+Now you can visit [`localhost:4000`](http://localhost:4000/api) from a GraphiQL IDE 
+
+
+## Notes
+
+- app is named `Api`
+- this is currently using Phoenix 1.2RC
+- removed get text 
+- removed views
+- no brunch
+- no ecto (in favor of RethinkDB)

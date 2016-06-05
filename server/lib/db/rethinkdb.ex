@@ -1,3 +1,3 @@
-defmodule App.DB do
+defmodule DB.RethinkDB do
   use RethinkDB.Connection
 end

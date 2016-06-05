@@ -1,10 +1,10 @@
-defmodule App.Mixfile do
+defmodule Api.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :app,
-     version: "0.0.1",
-     elixir: "~> 1.0",
+    [app: :api,
+     version: "1.0.0",
+     elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -12,23 +12,25 @@ defmodule App.Mixfile do
      deps: deps]
   end
 
-  # Configuration for the OTP application.
-  #
-  # Type `mix help compile.app` for more information.
   def application do
-    [mod: {App, []},
-     applications: [:phoenix, :cowboy, :logger, :rethinkdb, :plug_graphql]]
+    [mod: {Api, []},
+     applications: [
+       :phoenix,
+       :phoenix_pubsub,
+       :cowboy,
+       :logger,
+       :rethinkdb,
+     ]]
   end
 
-  # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib"]
 
   defp deps do
-    [{:phoenix, "~> 1.1.2"},
+    [{:phoenix, "~> 1.2.0-rc"},
+     {:phoenix_pubsub, "~> 1.0.0-rc"},
      {:cowboy, "~> 1.0"},
-     {:rethinkdb, "~> 0.3.2"},
-     {:plug_graphql, "~> 0.1.4"},
-   ]
+     {:rethinkdb, "~> 0.4.0"},
+    ]
   end
 end

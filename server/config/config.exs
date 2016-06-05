@@ -6,12 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :app, App.Endpoint,
+config :api, Api.Endpoint,
   url: [host: "localhost"],
-  root: Path.dirname(__DIR__),
-  secret_key_base: "Hlc/Hvf1DRC3KUBApSTe9soZ+CzQT8BHpXDfCck+XWdGbz5U/6duBTJcFB3GTqgE",
-  render_errors: [accepts: ~w(json)],
-  pubsub: [name: App.PubSub,
+  secret_key_base: "7vhij3G9dO95hKEML1zjhOv5xjSY43KJ/DG8w1DSvhe3Cor3PaXeLOxvb86+Ek+D",
+  render_errors: [view: Api.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Api.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

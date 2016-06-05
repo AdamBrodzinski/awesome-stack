@@ -1,12 +1,12 @@
-defmodule App.Web do
+defmodule Api.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use App.Web, :controller
-      use App.Web, :view
+      use Api.Web, :controller
+      use Api.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -16,7 +16,7 @@ defmodule App.Web do
   below.
   """
 
-  def model do
+  def graphql do
     quote do
       # Define common model functionality
     end
@@ -26,19 +26,7 @@ defmodule App.Web do
     quote do
       use Phoenix.Controller
 
-      import App.Router.Helpers
-    end
-  end
-
-  def view do
-    quote do
-      use Phoenix.View, root: "web/templates"
-
-      # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
-
-      import App.Router.Helpers
-      import App.ErrorHelpers
+      import Api.Router.Helpers
     end
   end
 
