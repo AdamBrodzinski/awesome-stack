@@ -20,6 +20,7 @@ defmodule Api.Mixfile do
        :cowboy,
        :logger,
        :rethinkdb,
+       :absinthe_plug,
      ]]
   end
 
@@ -31,6 +32,7 @@ defmodule Api.Mixfile do
      {:phoenix_pubsub, "~> 1.0.0-rc"},
      {:cowboy, "~> 1.0"},
      {:rethinkdb, "~> 0.4.0"},
+     {:absinthe_plug, "~> 1.1"},
     ]
   end
 end

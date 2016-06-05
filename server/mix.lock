@@ -1,4 +1,6 @@
-%{"connection": {:hex, :connection, "1.0.2", "f4a06dd3ecae4141aa66f94ce92ea4c4b8753069472814932f1cadbc3078ab80", [:mix], []},
+%{"absinthe": {:hex, :absinthe, "1.1.6", "17ba3b2c1ad8978a087f6d374838c27f7d56ef0d28612aceb1988f5408fcf934", [:mix], []},
+  "absinthe_plug": {:hex, :absinthe_plug, "1.1.3", "6abd17e91b402c45446dc4273a2368f6cc48c545334b4bc0c8394913749575c9", [:mix], [{:plug, "~> 1.0", [hex: :plug, optional: false]}, {:absinthe, "~> 1.1", [hex: :absinthe, optional: false]}]},
+  "connection": {:hex, :connection, "1.0.2", "f4a06dd3ecae4141aa66f94ce92ea4c4b8753069472814932f1cadbc3078ab80", [:mix], []},
   "cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:rebar, :make], [{:cowlib, "~> 1.0.0", [hex: :cowlib, optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, optional: false]}]},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], []},
   "mime": {:hex, :mime, "1.0.0", "b63027733bba00b1013bad14e25dc8b6629ecb817731544a88a0fd14f2a55685", [:mix], []},
