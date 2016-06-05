@@ -1,7 +1,7 @@
 defmodule GraphQL.Types do
   use Absinthe.Schema
 
-  @desc "An item in module"
+  @desc "Acme User"
   object :user do
     field :id, :id
     field :email, :string

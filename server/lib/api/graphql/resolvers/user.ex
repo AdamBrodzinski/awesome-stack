@@ -1,11 +1,11 @@
-defmodule GraphQL.Resolvers.User do
-  @items %{
-    "foo" => %{id: "foo", email: "foo@example.com"},
-    "bar" => %{id: "bar", email: "bar@example.com"}
-  }
+import RethinkDB.Query 
+import RethinkDB.Query, only: [table: 1, get: 2]
 
-  def find_one_by_id(%{id: item_id}, _) do
-    # return faked data
-    {:ok, @items[item_id]}
+defmodule GraphQL.Resolvers.User do
+
+  def find_one_by_id(args, _) do
+    table("users")
+      |> get(args.id)
+      |> DB.Helpers.run
   end
 end
