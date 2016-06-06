@@ -9,6 +9,14 @@ defmodule GraphQL.PublicSchema do
     end
   end
 
+  mutation do
+    field :create_user, type: :user do
+      arg :email, non_null(:string)
+      arg :password, non_null(:string)
+      resolve &GraphQL.Resolvers.User.create/2
+    end
+  end
+
   # convert db keys to symbols since we're not using Ecto
   default_resolve fn _, %{source: source, definition: %{name: name}} ->
     if is_boolean(Map.get(source, name)) do
