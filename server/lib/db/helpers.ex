@@ -35,16 +35,16 @@ defmodule DB.Helpers do
   end
 
 
-  # returns a tuple based on RethinkDB response
-  defp handle_response(%{data: data}) do
-    case data do
-      %{"first_error" => error} -> {:error, error}
-      # Rethink related error
-      %{"r" => errors} -> raise List.first errors
-      _ ->
-        {:ok, data}
-    end
+  defp handle_response(%{data: %{"r" => errors}}), do: raise List.first errors
+
+  defp handle_response(%{data: %{"first_error" => error}}), do: {:error, error}
+
+  # if user uses `return_changes:true` on an insert or update
+  defp handle_response(%{data: %{"changes" => [%{"new_val" => new_doc}]}}) do
+    {:ok, new_doc}
   end
+
+  defp handle_response(%{data: data}), do: {:ok, data}
 
   defp handle_response(%RethinkDB.Exception.ConnectionClosed{}) do
     raise "Cannot connect to RethinkDB"
